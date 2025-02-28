@@ -1,28 +1,35 @@
 <!DOCTYPE html> <!-- indica que o documento é HTML5-->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"> <!-- sistema de codificação do português-->
-        <!-- largura da página será a largura do dispositivo -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Cartão de Apresentação </title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/scripts.js"> </script>
-        <!--script faz ref ao arquivo .js-->
-        <!--STYLESHEET-->
-        <!--faz referencia de arquivo css-->
-        <!--rel designar o tipo da relacao que é folha de estilo-->
-        <!--href é a referencia do hypertexto-->
-    </head>
-    <body>
-        <div class="container"> <!-- divisão lógica de conteúdo -->
-            <div class="foto">
-            <img src="https://placehold.co/150" alt="Foto de Perfil"/>
+
+<head>
+    <meta charset="UTF-8"> <!-- sistema de codificação do português-->
+    <!-- largura da página será a largura do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cartão de Apresentação </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--script faz ref ao arquivo .js-->
+    <!--STYLESHEET-->
+    <!--faz referencia de arquivo css-->
+    <!--rel designar o tipo da relacao que é folha de estilo-->
+    <!--href é a referencia do hypertexto-->
+</head>
+
+<body>
+    <div class="container"> <!-- divisão lógica de conteúdo -->
+        <div class="foto">
+            <img src="img/pfp.png" alt="FotodePerfil" />
         </div>
         <div class="textos1">
             <h2> Guilherme Tonin </h2>
             <!-- parágrafo -->
-            <p> Estudante de Sistema de Informação </p> 
-            <button onclick="mensagem()"> Seguir </button>
+            <p>1º Semestre</p>
+            <p> Estudante de Sistema de Informação </p>
+            <button onclick="mensagem()">Seguir -></button>
         </div>
-    </body>
+</body>
+
 </html>
