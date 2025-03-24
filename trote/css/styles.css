@@ -59,3 +59,36 @@ h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+table tr td {
+  /* apenas TD dentro dos TR mudam */
+  border: 2px solid black;
+  padding: 10px;
+}
+table {
+  border: 2px solid black;
+  margin: 0 auto; /* 0  cima e baixo e automatico para centralizar horizontal */
+  border-collapse: collapse;
+}
+.laranja {
+  background-color: #ffc000;
+}
+.preto {
+  background-color: black;
+  color: white;
+}
+.roxo {
+  background-color: #ac75d5;
+}
+.azul {
+  background-color: #002060;
+  color: white;
+}
+.verde {
+  background-color: #92d050;
+}
+.vermelho {
+  background-color: #ff5b5b;
+}
+table th {
+  padding: 10px;
+}
