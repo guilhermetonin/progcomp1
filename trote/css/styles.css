@@ -59,6 +59,10 @@ h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
 table tr td {
   /* apenas TD dentro dos TR mudam */
   border: 2px solid black;
@@ -91,4 +95,18 @@ table {
 }
 table th {
   padding: 10px;
+}
+.campos {
+  margin: 20px;
+}
+.containerCinza {
+  width: 60%;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: #dbe5f1;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.tableAzul {
+  background-color: #dbe5f1;
 }
