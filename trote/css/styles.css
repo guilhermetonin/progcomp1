@@ -5,6 +5,7 @@ body {
   background-color: #f4f4f4;
   text-align: center;
 }
+
 header {
   background-color: #28a745;
   color: white;
@@ -13,19 +14,24 @@ header {
   /* 0px = esquerda e direita */
   font-size: 24px;
 }
+
 nav {
   background-color: #007bff;
   padding: 10px;
-  display: flex; /* flexbox */
+  display: flex;
+  /* flexbox */
   justify-content: space-between;
   /* alinhamento na horizontal : espaço entre os links */
   align-items: center;
 }
+
 #links-menu {
   /* usa # para fazer ref do id do div */
   display: flex;
-  gap: 20px; /* espaco de 20px */
+  gap: 20px;
+  /* espaco de 20px */
 }
+
 /* configura o estilo das âncoras que estao dentro do nav */
 nav a {
   color: white;
@@ -34,72 +40,122 @@ nav a {
   font-size: 18px;
   background-color: #005663;
   border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* ease = tipo de velo */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* ease = tipo de velo */
 }
+
 nav a:hover {
   /* :hover = ao passar o mouse pelos os icones de navegacao */
-  background-color: #003d82; /* cor do fundo vai mudar */
+  background-color: #003d82;
+  /* cor do fundo vai mudar */
   transform: scale(0.98);
 }
+
 img {
-  width: 110px; /* largura */
+  width: 110px;
+  /* largura */
   height: auto;
-  margin-right: 20px; /* espacamento a direita de 20px */
+  margin-right: 20px;
+  /* espacamento a direita de 20px */
   border-radius: 10px;
 }
+
 .container {
   width: 70%;
-  margin: 20px auto; /* 20 px acima e abaixo e auto direita e esquerda */
+  margin: 20px auto;
+  /* 20 px acima e abaixo e auto direita e esquerda */
   text-align: justify;
   background-color: white;
-  padding: 20px; /* nos 4 lados */
+  padding: 20px;
+  /* nos 4 lados */
   border-radius: 10px;
 }
+
 h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+
 h3 {
   text-align: center;
   margin-bottom: 5px;
 }
+
+
+/* TABELAS */
+
 table tr td {
   /* apenas TD dentro dos TR mudam */
   border: 2px solid black;
   padding: 10px;
 }
+
+table td {
+  text-align: left;
+}
+
+table th {
+  border: 2px solid black;
+  text-align: center;
+}
+
 table {
   border: 2px solid black;
-  margin: 0 auto; /* 0  cima e baixo e automatico para centralizar horizontal */
+  margin: 0 auto;
+  /* 0  cima e baixo e automatico para centralizar horizontal */
   border-collapse: collapse;
 }
+
+table li {
+  text-align: left;
+  margin-left: -20px;
+  margin-bottom: 20px;
+}
+
+
 .laranja {
   background-color: #ffc000;
 }
+
 .preto {
-  background-color: black;
+  background-color: rgb(58, 58, 58);
   color: white;
 }
+
 .roxo {
   background-color: #ac75d5;
 }
+
 .azul {
   background-color: #002060;
   color: white;
+  font-weight: bold;
+  border: 2px solid black;
 }
+
+.azul th {
+  border: 2px solid black;
+}
+
+
 .verde {
   background-color: #92d050;
 }
+
 .vermelho {
   background-color: #ff5b5b;
 }
+
 table th {
   padding: 10px;
 }
+
 .campos {
   margin: 20px;
 }
-.containerCinza {
+
+.containerAzul {
+  text-align: left;
   width: 60%;
   margin: auto;
   padding: 10px 20px;
@@ -107,6 +163,39 @@ table th {
   border: 2px solid black;
   border-radius: 10px;
 }
+
 .tableAzul {
   background-color: #dbe5f1;
 }
+
+.tableAzul td {
+  text-align: left;
+}
+
+#metasEquipe {
+  /* 90% total */
+  width: 90%;
+  /* centralizar tabela */
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+#metasEquipe th,
+td {
+  padding: 10px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.containerImportante {
+  width: 60%;
+  margin: auto;
+  margin-top: 25px;
+  border: 2px solid black;
+  font-weight: bold;
+  background-color: #edefd5;
+  text-align: justify;
+  padding: 10px;
+}
+
+/* TABELAS */
