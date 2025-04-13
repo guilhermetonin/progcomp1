@@ -10,8 +10,8 @@ header {
   background-color: #28a745;
   color: white;
   padding: 15px 0;
-  /* espacamento interno de 15px = acima e abaixo */
-  /* 0px = esquerda e direita */
+  /* espaçamento interno de 15px p acima e abaixo */
+  /* 0px na esquerda e direita */
   font-size: 24px;
 }
 
@@ -29,10 +29,10 @@ nav {
   /* usa # para fazer ref do id do div */
   display: flex;
   gap: 20px;
-  /* espaco de 20px */
+  /* espaço de 20px */
 }
 
-/* configura o estilo das âncoras que estao dentro do nav */
+/* CONFIG DAS ANCORAS QUE ESTAO DENTRO DO NAV */
 nav a {
   color: white;
   text-decoration: none;
@@ -41,13 +41,13 @@ nav a {
   background-color: #005663;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  /* ease = tipo de velo */
+  /* ease = é um tipo de velocidade */
 }
 
+/* :hover = ao passar o mouse pelos os icones de navegacao */
 nav a:hover {
-  /* :hover = ao passar o mouse pelos os icones de navegacao */
+  /* COR DE FUNDO */
   background-color: #003d82;
-  /* cor do fundo vai mudar */
   transform: scale(0.98);
 }
 
@@ -56,18 +56,19 @@ img {
   /* largura */
   height: auto;
   margin-right: 20px;
-  /* espacamento a direita de 20px */
+  /* espaçamento a direita de 20px */
   border-radius: 10px;
 }
 
+/* TODAS INFORMACOES FICAM DENTRO DESSE CONTAINER */
 .container {
   width: 70%;
   margin: 20px auto;
-  /* 20 px acima e abaixo e auto direita e esquerda */
+  /* 20 px acima e abaixo || auto direita e esquerda */
   text-align: justify;
   background-color: white;
   padding: 20px;
-  /* nos 4 lados */
+  /* 20px nos 4 lados */
   border-radius: 10px;
 }
 
@@ -81,8 +82,22 @@ h3 {
   margin-bottom: 5px;
 }
 
+li {
+  margin-bottom: 20px;
+}
 
-/* TABELAS */
+
+/* CONFIG VISUAIS DAS TABELAS */
+table {
+  border: 2px solid black;
+  margin: 0 auto;
+  /* 0  cima e baixo e automatico para centralizar horizontal */
+  border-collapse: collapse;
+}
+
+table td {
+  text-align: left;
+}
 
 table tr td {
   /* apenas TD dentro dos TR mudam */
@@ -90,20 +105,10 @@ table tr td {
   padding: 10px;
 }
 
-table td {
-  text-align: left;
-}
-
 table th {
   border: 2px solid black;
   text-align: center;
-}
-
-table {
-  border: 2px solid black;
-  margin: 0 auto;
-  /* 0  cima e baixo e automatico para centralizar horizontal */
-  border-collapse: collapse;
+  padding: 10px;
 }
 
 table li {
@@ -113,6 +118,24 @@ table li {
 }
 
 
+/* TABELA GRANDE DAS METAS */
+#metasEquipe {
+  /* 90% total */
+  width: 90%;
+  /* centralizar tabela */
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+#metasEquipe th,
+td {
+  padding: 10px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+
+/* DIFERENÇAR AS EQUIPES POR CORES NAS TABELAS */
 .laranja {
   background-color: #ffc000;
 }
@@ -137,7 +160,6 @@ table li {
   border: 2px solid black;
 }
 
-
 .verde {
   background-color: #92d050;
 }
@@ -146,14 +168,8 @@ table li {
   background-color: #ff5b5b;
 }
 
-table th {
-  padding: 10px;
-}
 
-.campos {
-  margin: 20px;
-}
-
+/* AVISOS DOS TEXTOS */
 .containerAzul {
   text-align: left;
   width: 60%;
@@ -162,29 +178,6 @@ table th {
   background-color: #dbe5f1;
   border: 2px solid black;
   border-radius: 10px;
-}
-
-.tableAzul {
-  background-color: #dbe5f1;
-}
-
-.tableAzul td {
-  text-align: left;
-}
-
-#metasEquipe {
-  /* 90% total */
-  width: 90%;
-  /* centralizar tabela */
-  margin: auto;
-  margin-bottom: 25px;
-}
-
-#metasEquipe th,
-td {
-  padding: 10px;
-  border: 2px solid black;
-  text-align: center;
 }
 
 .containerImportante {
@@ -198,4 +191,72 @@ td {
   padding: 10px;
 }
 
-/* TABELAS */
+
+/* CONFIG DA CALCULADORA */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  width: 100%;
+  max-width: 350px; /* para usar no max 350px dos 100% do container */
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 5px; 
+  text-align: center;
+}
+
+select {
+  margin-top: 10px;
+  margin-left: auto; 
+  margin-right: auto; 
+  max-width: 120px;
+}
+
+input {
+  padding: 10px;
+  width: 95%;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  background-color: #007bff;
+  margin-top: 25px;
+  font-size: 18px; 
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+  background-color: #005663;
+  transform: scale(1.01);
+}
+
+#soma {
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #d9fff9;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+#equipe {
+  font-size: 18px; 
+  padding: 10px;
+  border: 2px solid #000000; 
+  border-radius: 5px; 
+}
