@@ -181,6 +181,8 @@ function exe4() {
 
 }
 
+// EXERCÍCIO 5
+
 function exe5() {
 
   for (let numero = 1; numero <= 10; numero++) {
@@ -195,32 +197,80 @@ function exe5() {
 
 }
 
+// EXERCÍCIO 6
+
 function exe6() {
 
-  let nPrazo = 0, tPrazo = 0, tAvista = 0, nAvista = 0, total = 0
+  let codigo, valor, nPrazo = 0, totalPrazo = 0, totalAvista = 0, nAvista = 0, total = 0
+
+  for (let conta = 1; conta <= 3; conta++) {
+
+    do { // CÓDIGO
+      codigo = (prompt(`Informe o código:`));
+    }
+    while (codigo != 'V' && codigo != 'P')
+
+    do { // VALOR
+      valor = Number(prompt(`Informe o valor da compra:`));
+    }
+    while (valor <= 0)
+
+    if (codigo == 'P') {
+      totalPrazo += valor
+    }
+    else { // CÓDIGO É 'V'
+      totalAvista += valor
+    }
+  }
+
+  total = totalPrazo + totalAvista
+  let prestacaoPrazo = totalPrazo / 3
+
+  console.log(`Total Prazo: R$ ${totalPrazo.toFixed(2)}`)
+  console.log(`Total Avista: R$ ${totalAvista.toFixed(2)}`)
+  console.log(`Total de Todas as Vendas: R$ ${total.toFixed(2)}`)
+  console.log(`Primeira Prestação Prazo: R$ ${prestacaoPrazo.toFixed(2)}`)
+
+}
+
+// EXERCÍCIO 7
+
+function exe7() {
+
+  let idade, peso, altura, qtde50 = 0, somaAltura = 0, mediaAltura = 0, peso40 = 0
 
   for (let conta = 1; conta <= 5; conta++) {
 
-    let codigo = (prompt(`Informe o código:`))
-    let valor = Number(prompt(`Informe o valor da compra:`))
+    do {
+      idade = Number(prompt(`(Pessoa ${conta}) Informe sua idade:`))
+    }
+    while (idade <= 0)
 
-    if (codigo == "P" | codigo == "p") {
-      tPrazo += valor
-      nPrazo++
+    do {
+      peso = Number(prompt(`(Pessoa ${conta}) Informe seu peso:`))
     }
-    else if (codigo == "V" | codigo == "v") {
-      tAvista += valor
-      nAvista++
-    }
-    else {
-      alert(`Houve um erro de digitação`)
-      conta-- // foi adicionado +1 no conta, aqui ele diminuiu -1
-      continue
-    }
+    while (peso <= 0)
 
+    do {
+      altura = Number(prompt(`(Pessoa ${conta}) Informe sua altura:`))
+    }
+    while (altura <= 0)
+
+    if (idade > 50) {
+      qtde50++
+    }
+    if (idade >= 10 && idade <= 20) {
+      somaAltura += altura
+      mediaAltura++
+    }
+    if (peso <= 40) {
+      peso40++
+    }
   }
-  total = tPrazo + tAvista
-  console.log(`Total Prazo: ${tPrazo} Total Avista: ${tAvista} Total de todas: ${total}`)
+  console.log(`Quantidade de pessoas 50+ anos: ${qtde50}`)
+  console.log(`Média das alturas de pessoas entre 10 e 20 anos: ${(somaAltura / mediaAltura)}cm`)
+  console.log(`Porcentagem de pessoas com -40KG: ${(peso40 / 5) * 100}%`)
+
 
 }
 
