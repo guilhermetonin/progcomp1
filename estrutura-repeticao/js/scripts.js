@@ -237,7 +237,7 @@ function exe6() {
 
 function exe7() {
 
-  let idade, peso, altura, qtde50 = 0, somaAltura = 0, mediaAltura = 0, peso40 = 0
+  let idade, peso, altura, qtde50 = 0, somaAltura = 0, qtdeAltura = 0, peso40 = 0
 
   for (let conta = 1; conta <= 5; conta++) {
 
@@ -261,16 +261,66 @@ function exe7() {
     }
     if (idade >= 10 && idade <= 20) {
       somaAltura += altura
-      mediaAltura++
+      qtdeAltura++
     }
     if (peso <= 40) {
       peso40++
     }
   }
   console.log(`Quantidade de pessoas 50+ anos: ${qtde50}`)
-  console.log(`Média das alturas de pessoas entre 10 e 20 anos: ${(somaAltura / mediaAltura)}cm`)
+  console.log(`Média das alturas de pessoas entre 10 e 20 anos: ${(somaAltura / qtdeAltura)}cm`)
   console.log(`Porcentagem de pessoas com -40KG: ${(peso40 / 5) * 100}%`)
 
+}
+
+// EXERCÍCIO 8
+
+function exe8() {
+  
+  let idade = 0, peso = 0, altura = 0, corOlho, corCabelo
+  let qtde50 = 0, qtde150 = 0, idade150 = 0, azul = 0, ruivo = 0
+
+  for (let i = 1; i <= 6; i++) {
+
+    do {
+      idade = Number(prompt(`Pessoa ${i} - Idade:`))
+    } while (idade <= 0)
+
+    do {
+      peso = Number(prompt(`Peso em kg:`)) 
+    } while (peso <= 0)
+    
+    do {
+      altura = Number(prompt(`Altura em cm:`))
+    } while (altura <= 0)
+
+    corOlho = prompt(`Cor dos olhos: | A- Azul | P - Preto | V - Verde | C - Castanho`).toUpperCase()
+    corCabelo = prompt(`Cor do cabelo: | P - Preto | C - Castanho | L - Loiro | R - Ruivo`).toUpperCase()
+
+
+    if (idade > 50 && peso < 60) {
+      qtde50++
+    }
+
+    if (altura < 150) {
+      idade150 += idade
+      qtde150++
+    }
+
+    if (corOlho == 'A') {
+      azul++
+    }
+
+    if (corCabelo == 'R' && corOlho !== 'A') {
+      ruivo++
+    }
+    
+  }
+
+  console.log(`Qtde Idade +50 e Peso < 60kg : ${qtde50}`)
+  console.log(`Média Idade com Altura < 1.50m : ${idade150 / qtde150}`)
+  console.log(`Olhos azuis % : ${(azul / 6) * 100}`)
+  console.log(`Qtde Ruivas sem olho Azul : ${ruivo}`)
 
 }
 
