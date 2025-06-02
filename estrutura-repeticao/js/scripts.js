@@ -324,5 +324,43 @@ function exe8() {
 
 }
 
+// EXERCÍCIO 9
+
+function exe9() {
+
+  let idade = 0, peso = 0, altura = 0
+  let mediaIdade = 0, qtde90 = 0, qtde190 = 0 
+
+  for (let i = 0; i <= 2; i++) {
+
+    do {
+      idade = Number(prompt(`Pessoa ${i} - Idade:`))
+    } while (idade <= 0)
+
+    do {
+      peso = Number(prompt(`Peso:`))
+    } while (peso <= 0)
+
+    do {
+      altura = Number(prompt(`Altura:`))
+    } while (altura <= 0)
+
+    mediaIdade += idade
+
+    if (peso > 90 && altura < 150) {
+      qtde90++
+    }
+
+    if (altura > 190) {
+      if (idade => 10 && idade <= 30)
+      qtde190++
+    }
+
+  }
+  console.log(`Média Idades: ${mediaIdade / 10}`)
+  console.log(`Qtde peso +90kg e -1.50m: ${qtde90}`)
+  console.log(`% 10 a 30 anos e +1.90m: ${(qtde190 / 6) * 100}`)
+
+}
 
 
