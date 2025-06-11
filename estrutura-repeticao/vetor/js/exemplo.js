@@ -34,7 +34,7 @@ function exe2() {
   let vet = [] // declaro vetor
 
   for (let i = 0; i < 2; i++) {
-    vet.push(Number(prompt(` Informe o ${i + 1}o. número `)))
+    vet.push(Number(prompt(` Informe o ${i+1}o. número `)))
   }
 
   for (let i = 0; i < 2; i++) {
@@ -79,28 +79,142 @@ function exe3() {
 
 }
 
-
-vai cair exercicio para ver qual numero é o maior
-// 
 function exe4() {
 
-  let vet = [], aux[]
+  let vet = []
+  let maiores = [] 
   let media = 0
 
   for (let i = 0; i < 8; i++) {
-    vet[i] = Number(prompt(`${i}o. número: `))
-  }
-  for (let i = 0; i < 8; i++) {
-    media += vet[i]
+    vet[i] = Number(prompt(`Informe o ${i+1}o. número:`))
+    media = media + vet[i]
   }
   media = media / vet.length
+
+  // maiores que a media
+  let qtde = 0
+  for (let i = 0; i < 8; i++) {
+
+    if (vet[i] > media) {
+      maiores.push(vet[i])
+      qtde++
+    }
+
+  }
+  
+  console.log(`Média: ${media}`)
+  console.log(`Tem ${qtde} valores acima da média`)
+  console.log(`Valores acima da média: ${maiores}`)
 
 }
 
 function exe5() {
+
+  let vet = []
+
+  for (let i = 0; i < 10; i++) {
+    vet[i] = Number(prompt(`Informe o ${i+1}o. número`))
+  }
+
+  let maiores = 0
+  let menores = 0
+  let iguais = 0
+
+  for (let i = 0; i < 10; i++) {
+    if (vet[i] > vet[0]) {
+      maiores++
+    }
+    else if (vet[i] < vet[0]) {
+      menores++
+    }
+    else {
+      iguais++
+    } 
+  }
+  
+  console.log(`Maiores que o primeiro: ${maiores}`)
+  console.log(`Menores que o primeiro: ${menores}`)
+  console.log(`Iguais ao primeiro: ${iguais}`)
+
 }
 
 function exe6() {
+
+  let vet = []
+
+  for (let i = 0; i < 12; i++) {
+    do {
+    vet[i] = Number(prompt(`Informe o ${i+1}o. número`))
+    } while (vet[i] < 0)
+  }
+
+  let numero
+  do {
+  numero = Number(prompt(`Informe o número a ser buscado`))
+  } while (numero < 0)
+
+  let qtde = 0
+  let posicoes = []
+
+  for (let i = 0; i < 12; i++) {
+    if (numero == vet[i]) {
+      qtde++
+      posicoes.push(i)
+    }
+  }
+
+  console.log(`Número a ser buscado ${numero}`)
+  console.log(`Apareceu ${qtde} vezes, nas posições ${posicoes}`)
+
 }
 
+
+function ordememaioremenor() {
+
+  let vet = []
+  let aux = 0
+  
+  // informar numeros
+  for (let i = 0; i < 5; i++) {
+
+    do {
+      vet[i] = Number(prompt(`Informe o ${i+1}o. número`))
+    } while (vet[i] < 0)
+
+  }
+
+
+  // maior e menor valor
+  let maiorValor = vet[0]
+  let menorValor = vet[0]
+
+  
+  for (let i = 0; i < 5; i++) {
+    if (maiorValor < vet[i]) {
+      maiorValor = vet[i]
+    }
+    if (menorValor > vet[i]) {
+      menorValor = vet[i]
+    }
+  }
+
+  // ordenar
+  for (let i = 0; i < 4; i++) {
+    for (let k = 0; k < 4; k++) {
+
+      if (vet[k] > vet[k+1]) {
+        aux = vet[k]
+        vet[k] = vet[k+1]
+        vet[k+1] = aux
+      }
+
+    }
+  }
+
+
+
+  console.log(`Menor valor: ${menorValor}`)
+  console.log(`Maior valor: ${maiorValor}`)
+  console.log(`Ordenado: ${vet}`)
+}
 

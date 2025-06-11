@@ -363,4 +363,34 @@ function exe9() {
 
 }
 
+// EXERCÍCIO 10
+function exe10() {
+  let somaPares = 0
+  let somaPrimos = 0
+  let numero
 
+  for (let i = 1; i <= 10; i++) {
+    do {
+      numero = Number(prompt(`Digite o ${i}o número:`))
+    } while (numero <= 0)
+
+    if (numero % 2 == 0) {
+      somaPares += numero
+    }
+
+    let contadorDivisores = 0
+
+    for (let divisor = 1; divisor <= numero; divisor++) {
+      if (numero % divisor == 0) {
+        contadorDivisores++
+      }
+    }
+
+    if (contadorDivisores == 2) {
+      somaPrimos += numero
+    }
+  }
+
+  console.log(`Soma dos números Pares: ${somaPares}`)
+  console.log(`Soma dos números Primos: ${somaPrimos}`)
+}
